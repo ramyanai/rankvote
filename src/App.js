@@ -1,4 +1,4 @@
-// Final attempt to fix Netlify build
+/* eslint-disable no-undef */
 import { useState, useEffect } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithCustomToken, signInAnonymously, onAuthStateChanged } from 'firebase/auth';
