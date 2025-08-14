@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithCustomToken, signInAnonymously, onAuthStateChanged } from 'firebase/auth';
 import { getFirestore, doc, getDoc, setDoc, onSnapshot, updateDoc, arrayUnion } from 'firebase/firestore';
-import { LucidePlus, LucideCopy, LucideArrowRight, LucideTrophy, LucideUsers, LucideCheck, LucideLoader2, LucideArrowUp, LucideArrowDown, LucideScale, LucideStar, LucideChevronLeft, LucideCoffee } from 'lucide-react';
+import { LucidePlus, LucideCopy, LucideArrowRight, LucideTrophy, LucideUsers, LucideCheck, LucideLoader2, LucideArrowUp, LucideArrowDown, LucideScale, LucideStar, LucideChevronLeft } from 'lucide-react';
 
 // Firebase configuration from the environment.
 const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
@@ -281,7 +281,6 @@ const HomePage = ({ handleCreateSession, handleJoinSession, userId, error }) => 
                 <p className="text-sm font-light">Your User ID: <span className="font-mono">{userId || 'Loading...'}</span></p>
                 <p className="text-sm font-light mt-2">This is important for other users to find you.</p>
             </div>
-            {/* The footer was removed to fix the build error */}
         </div>
     );
 };
@@ -323,7 +322,6 @@ const CreateSessionForm = ({ handleCreateSession, setPage }) => {
                     </button>
                 </form>
             </div>
-            {/* The footer was removed to fix the build error */}
         </div>
     );
 };
@@ -365,7 +363,6 @@ const JoinSessionForm = ({ handleJoinSession, setPage, error }) => {
                     </button>
                 </form>
             </div>
-            {/* The footer was removed to fix the build error */}
         </div>
     );
 };
@@ -486,7 +483,6 @@ const CreateOptionsPage = ({ sessionCode, sessionData, db, userId, setPage, setM
                     </button>
                 )}
             </div>
-            {/* The footer was removed to fix the build error */}
         </div>
     );
 };
@@ -640,7 +636,6 @@ const VotingPage = ({ sessionCode, sessionData, db, userId, setPage }) => {
                     </button>
                 )}
             </div>
-            {/* The footer was removed to fix the build error */}
         </div>
     );
 };
@@ -662,7 +657,6 @@ const ResultsPage = ({ sessionData, sessionCode, setPage }) => {
                     <p className="text-xl font-bold text-gray-700">{sessionCode}</p>
                 </div>
             </div>
-            {/* The footer was removed to fix the build error */}
         </div>
     );
 };
