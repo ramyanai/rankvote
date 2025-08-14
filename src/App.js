@@ -1,9 +1,10 @@
 /* eslint-disable no-undef */
+/* eslint-disable no-loop-func */
 import { useState, useEffect } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithCustomToken, signInAnonymously, onAuthStateChanged } from 'firebase/auth';
-import { getFirestore, collection, doc, getDoc, setDoc, onSnapshot, updateDoc, arrayUnion } from 'firebase/firestore';
-import { LucidePlus, LucideCopy, LucideArrowRight, LucideTrophy, LucideUsers, LucideCheck, LucideLoader2, LucideArrowUp, LucideArrowDown, LucideScale, LucideGroup, LucideStar, LucideChevronLeft, LucideCoffee } from 'lucide-react';
+import { getFirestore, doc, getDoc, setDoc, onSnapshot, updateDoc, arrayUnion } from 'firebase/firestore';
+import { LucidePlus, LucideCopy, LucideArrowRight, LucideTrophy, LucideUsers, LucideCheck, LucideLoader2, LucideArrowUp, LucideArrowDown, LucideScale, LucideStar, LucideChevronLeft, LucideCoffee } from 'lucide-react';
 
 // Firebase configuration from the environment.
 const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
