@@ -1,4 +1,4 @@
-// This is a test comment
+// Final attempt to fix Netlify build
 import { useState, useEffect } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithCustomToken, signInAnonymously, onAuthStateChanged } from 'firebase/auth';
