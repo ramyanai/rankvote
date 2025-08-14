@@ -681,10 +681,10 @@ const Footer = () => (
         <p className="text-sm font-light">
             Made by Ram Yanamandra in NJ
         </p>
-        <a href="#" className="flex items-center justify-center mt-2 text-sm text-yellow-600 hover:text-yellow-700">
+        <button type="button" className="flex items-center justify-center mt-2 text-sm text-yellow-600 hover:text-yellow-700 underline" onClick={() => window.open('https://buymeacoffee.com/', '_blank', 'noopener,noreferrer')}>
             <LucideCoffee className="h-4 w-4 mr-1" />
             Buy me a coffee
-        </a>
+        </button>
     </footer>
 );
 
