@@ -11,7 +11,7 @@ const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial
 
 // Initialize Firebase and Firestore
 let app, db, auth;
-if (Object.keys(firebaseConfig).length > 0) {
+if (firebaseConfig && Object.keys(firebaseConfig).length > 0) {
     app = initializeApp(firebaseConfig);
     db = getFirestore(app);
     auth = getAuth(app);
@@ -36,6 +36,7 @@ const App = () => {
         const initializeAuth = async () => {
             if (!auth) {
                 console.error("Firebase Auth not initialized.");
+                setIsAuthReady(true);
                 return;
             }
             try {
@@ -49,14 +50,14 @@ const App = () => {
             }
         };
 
-        const authStateUnsubscribe = onAuthStateChanged(auth, (user) => {
+        const authStateUnsubscribe = auth ? onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUserId(user.uid);
             } else {
                 setUserId(null);
             }
             setIsAuthReady(true);
-        });
+        }) : () => {};
 
         initializeAuth();
 
