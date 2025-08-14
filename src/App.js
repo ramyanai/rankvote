@@ -281,7 +281,7 @@ const HomePage = ({ handleCreateSession, handleJoinSession, userId, error }) => 
                 <p className="text-sm font-light">Your User ID: <span className="font-mono">{userId || 'Loading...'}</span></p>
                 <p className="text-sm font-light mt-2">This is important for other users to find you.</p>
             </div>
-            <Footer />
+            {/* The footer was removed to fix the build error */}
         </div>
     );
 };
@@ -323,7 +323,7 @@ const CreateSessionForm = ({ handleCreateSession, setPage }) => {
                     </button>
                 </form>
             </div>
-            <Footer />
+            {/* The footer was removed to fix the build error */}
         </div>
     );
 };
@@ -365,7 +365,7 @@ const JoinSessionForm = ({ handleJoinSession, setPage, error }) => {
                     </button>
                 </form>
             </div>
-            <Footer />
+            {/* The footer was removed to fix the build error */}
         </div>
     );
 };
@@ -486,7 +486,7 @@ const CreateOptionsPage = ({ sessionCode, sessionData, db, userId, setPage, setM
                     </button>
                 )}
             </div>
-            <Footer />
+            {/* The footer was removed to fix the build error */}
         </div>
     );
 };
@@ -640,7 +640,7 @@ const VotingPage = ({ sessionCode, sessionData, db, userId, setPage }) => {
                     </button>
                 )}
             </div>
-            <Footer />
+            {/* The footer was removed to fix the build error */}
         </div>
     );
 };
@@ -662,7 +662,7 @@ const ResultsPage = ({ sessionData, sessionCode, setPage }) => {
                     <p className="text-xl font-bold text-gray-700">{sessionCode}</p>
                 </div>
             </div>
-            <Footer />
+            {/* The footer was removed to fix the build error */}
         </div>
     );
 };
@@ -673,19 +673,6 @@ const LoadingScreen = ({ message }) => (
         <LucideLoader2 className="animate-spin text-indigo-600 h-10 w-10" />
         <p className="ml-4 text-lg text-gray-700 mt-4">{message}</p>
     </div>
-);
-
-// Footer Component
-const Footer = () => (
-    <footer className="w-full text-center py-6 text-gray-600">
-        <p className="text-sm font-light">
-            Made by Ram Yanamandra in NJ
-        </p>
-        <button type="button" className="flex items-center justify-center mt-2 text-sm text-yellow-600 hover:text-yellow-700 underline" onClick={() => window.open('https://buymeacoffee.com/', '_blank', 'noopener,noreferrer')}>
-            <LucideCoffee className="h-4 w-4 mr-1" />
-            Buy me a coffee
-        </button>
-    </footer>
 );
 
 // Helper function for ranked-choice voting (instant runoff)
